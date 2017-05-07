@@ -27,10 +27,10 @@
  */
 package org.infinitest.testrunner;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.infinitest.util.*;
-import org.junit.*;
+import org.infinitest.util.EqualityTestSupport;
 
 public class PointOfFailureTest extends EqualityTestSupport {
 	private static final String TEST_CLASS_NAME = "org.infinitest.SomeTest";

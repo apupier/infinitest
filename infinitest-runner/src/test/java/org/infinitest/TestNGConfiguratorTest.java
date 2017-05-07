@@ -34,7 +34,8 @@ import java.util.*;
 
 import org.infinitest.config.InfinitestConfiguration;
 import org.infinitest.config.MemoryInfinitestConfigurationSource;
-import org.junit.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.rules.TemporaryFolder;
 
 public class TestNGConfiguratorTest {

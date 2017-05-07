@@ -48,7 +48,7 @@ public class FailureMediatorTest {
 	private TestEvent event3;
 	private FakeResourceFinder finder;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		registry = Mockito.mock(ProblemMarkerRegistry.class);
 		finder = new FakeResourceFinder();

@@ -43,12 +43,12 @@ public class SwtEventQueueTest {
 	protected boolean failingRunnableExecuted;
 	protected boolean started;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		queue = new SwtEventQueue();
 	}
 
-	@After
+	@AfterEach
 	public void cleanup() {
 		// Clear interrupted state
 		Thread.interrupted();

@@ -39,7 +39,7 @@ public class WhenExtractingSettingsFromAJavaProject {
 	private IJavaProject project;
 	private IPath path;
 
-	@Before
+	@BeforeEach
 	public void inContext() throws JavaModelException {
 		project = mock(IJavaProject.class);
 		path = mock(IPath.class);

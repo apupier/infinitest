@@ -43,7 +43,7 @@ public class JavaProjectSetTest {
 	private IJavaProject project;
 	private JavaProjectSet projectSet;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		URL resource = getClass().getResource("/emptyJar.jar");
 		File externalJar = new File(resource.getPath());

@@ -45,7 +45,7 @@ public class WhenDisplayingTestFailureDetails {
 	private ErrorViewerResolution resolution;
 	protected String actualMessage;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		actualStackTrace = newArrayList();
 		resolution = new ErrorViewerResolution("TestName.methodName") {

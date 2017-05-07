@@ -27,11 +27,10 @@
  */
 package org.infinitest.util;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.*;
-
-import org.junit.*;
 
 public abstract class EqualityTestSupport {
 	protected abstract Object createEqualInstance();

@@ -47,7 +47,7 @@ public class WhenMarkingTestsAsSlow extends EqualityTestSupport {
 	private SlowTestMarkerInfo marker;
 	private ResourceLookup resourceLookup;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		resourceLookup = mock(ResourceLookup.class);
 		MethodStats stats = new MethodStats("shouldRunSlowly");

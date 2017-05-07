@@ -27,20 +27,30 @@
  */
 package org.infinitest.testrunner;
 
-import static com.google.common.collect.Iterables.*;
-import static org.infinitest.testrunner.TestEvent.*;
-import static org.junit.Assert.*;
+import static com.google.common.collect.Iterables.get;
+import static com.google.common.collect.Iterables.getOnlyElement;
+import static com.google.common.collect.Iterables.isEmpty;
+import static com.google.common.collect.Iterables.size;
+import static org.infinitest.testrunner.TestEvent.methodFailed;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.infinitest.*;
-import org.infinitest.testrunner.exampletests.*;
-//import org.infinitest.testrunner.testables.*;
-import org.junit.*;
+import org.infinitest.MissingClassException;
+import org.infinitest.testrunner.exampletests.FailingJUnit4TestWithBefore;
+import org.infinitest.testrunner.exampletests.FailingJUnit4TestWithBeforeClass;
+import org.infinitest.testrunner.exampletests.FailingTest;
+import org.infinitest.testrunner.exampletests.JUnit3TestWithASuiteMethod;
+import org.infinitest.testrunner.exampletests.MultiTest;
+import org.infinitest.testrunner.exampletests.PassingTestCase;
+import org.infinitest.testrunner.exampletests.TestNGTest;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 
 public class WhenRunningJUnitTests {
 	private JUnit4Runner runner;
 	private static final Class<?> TEST_CLASS = TestThatThrowsExceptionInConstructor.class;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		TestThatThrowsExceptionInConstructor.fail = true;
 		FailingTest.fail = true;
@@ -48,7 +58,7 @@ public class WhenRunningJUnitTests {
 		runner = new JUnit4Runner();
 	}
 
-	@After
+	@AfterEach
 	public void cleanup() {
 		TestThatThrowsExceptionInConstructor.fail = false;
 		FailingTest.fail = false;
@@ -100,9 +110,9 @@ public class WhenRunningJUnitTests {
 		assertTrue(methodStats.startTime <= methodStats.stopTime);
 	}
 
-	@Test(expected = MissingClassException.class)
+	@Test
 	public void shouldThrowExceptionIfTestDoesNotExist() {
-		runner.runTest("test");
+		assertThrows(MissingClassException.class, () -> {runner.runTest("test");});
 	}
 
 	@Test

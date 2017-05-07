@@ -38,7 +38,7 @@ import org.junit.*;
 public class StatusBarTest {
 	private StatusBar statusBar;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		statusBar = new StatusBar();
 	}

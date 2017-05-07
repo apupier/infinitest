@@ -30,9 +30,8 @@ package org.infinitest.config;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.IOException;
-
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import com.google.common.io.CharSource;
 
@@ -40,7 +39,7 @@ public class InfinitestConfigurationParserTest {
 
 	private InfinitestConfigurationParser parser;
 
-	@Before
+	@BeforeEach
 	public void before() {
 		parser = new InfinitestConfigurationParser();
 	}

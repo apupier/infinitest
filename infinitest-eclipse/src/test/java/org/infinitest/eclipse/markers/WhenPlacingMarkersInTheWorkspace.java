@@ -43,7 +43,7 @@ public class WhenPlacingMarkersInTheWorkspace {
 	private ResourceLookup lookup;
 	private IWorkspaceRoot workspaceRoot;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		event = createEvent();
 		lookup = mock(ResourceLookup.class);

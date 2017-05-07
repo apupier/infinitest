@@ -55,7 +55,7 @@ public class WhenUpdatingTheProjectsInTheWorkspace extends ResourceEventSupport 
 	private WorkspaceStatus updatedStatus;
 	private int updates;
 
-	@Before
+	@BeforeEach
 	public void inContext() throws CoreException {
 		projects = newArrayList();
 		projectSet = mock(ProjectSet.class);

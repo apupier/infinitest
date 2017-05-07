@@ -46,7 +46,7 @@ public class WhenPreferencesAreChanged {
 	private PreferenceChangeHandler handler;
 	private CoreSettings coreSettings;
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		controller = mock(PluginActivationController.class);
 		coreSettings = mock(CoreSettings.class);
@@ -56,7 +56,7 @@ public class WhenPreferencesAreChanged {
 		handler.setSlowMarkerRegistry(new SlowMarkerRegistry());
 	}
 
-	@After
+	@AfterEach
 	public void cleanup() {
 		resetToDefaults();
 	}

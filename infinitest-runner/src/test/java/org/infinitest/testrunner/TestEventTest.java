@@ -27,21 +27,24 @@
  */
 package org.infinitest.testrunner;
 
-import static org.infinitest.testrunner.TestEvent.TestState.*;
-import static org.infinitest.testrunner.TestEvent.*;
+import static org.infinitest.testrunner.TestEvent.methodFailed;
+import static org.infinitest.testrunner.TestEvent.testCaseStarting;
+import static org.infinitest.testrunner.TestEvent.TestState.METHOD_FAILURE;
 import static org.junit.Assert.*;
 
-import java.io.*;
-import java.util.*;
-
-import jdave.test.*;
+import java.io.ByteArrayOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import java.util.List;
 
 import org.assertj.core.api.Assertions;
-import org.infinitest.util.*;
-import org.junit.*;
+import org.infinitest.util.EqualityTestSupport;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.rules.*;
 
-import com.google.common.base.*;
+import com.google.common.base.Strings;
+
+import jdave.test.JDaveUtils;
 
 public class TestEventTest extends EqualityTestSupport {
 	private TestEvent event;
@@ -50,7 +53,7 @@ public class TestEventTest extends EqualityTestSupport {
 	@Rule
 	public TestName testName = new TestName();
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		try {
 			throw new UnserializableException("Exception Message");

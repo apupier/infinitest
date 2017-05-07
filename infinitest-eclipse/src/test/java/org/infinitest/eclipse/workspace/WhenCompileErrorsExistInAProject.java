@@ -48,7 +48,7 @@ public class WhenCompileErrorsExistInAProject extends ResourceEventSupport {
 	private ProjectSet projectSet;
 	private EclipseWorkspace workspace;
 
-	@Before
+	@BeforeEach
 	public void inContext() throws CoreException {
 		projects = newArrayList();
 		projectSet = mock(ProjectSet.class);

@@ -42,7 +42,7 @@ public class WhenViewingAStackTrace {
 	private FailureViewer view;
 	private FakeShell dialog;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		element = new StackTraceElement("class1", "method1", "file1", 0);
 		view = new FailureViewer(null, "message", newArrayList(element), null);

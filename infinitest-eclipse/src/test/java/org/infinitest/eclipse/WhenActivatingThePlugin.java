@@ -42,7 +42,7 @@ public class WhenActivatingThePlugin {
 	private EventQueue eventQueue;
 	private NamedRunnable markerClearingRunnable;
 
-	@Before
+	@BeforeEach
 	public final void inContext() {
 		workspace = mock(IWorkspace.class);
 		coreUpdateNotifier = mock(IResourceChangeListener.class);

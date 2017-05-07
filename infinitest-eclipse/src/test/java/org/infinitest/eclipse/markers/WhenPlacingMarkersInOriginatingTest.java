@@ -45,7 +45,7 @@ public class WhenPlacingMarkersInOriginatingTest {
 	private IResource testResource;
 	private ResourceLookup lookup;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		testResource = mock(IResource.class);
 		lookup = mock(ResourceLookup.class);

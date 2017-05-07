@@ -36,7 +36,7 @@ public class ConsolePopulatingListenerTest {
 	private TextOutputWriter writer;
 	private ConsolePopulatingListener listener;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		writer = mock(TextOutputWriter.class);
 		listener = new ConsolePopulatingListener(writer);

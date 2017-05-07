@@ -27,14 +27,14 @@
  */
 package org.infinitest.testrunner;
 
-import static com.google.common.collect.Iterables.*;
-import static org.infinitest.testrunner.TestEvent.*;
-import static org.junit.Assert.*;
-import static org.junit.runner.Description.*;
+import static com.google.common.collect.Iterables.getOnlyElement;
+import static com.google.common.collect.Iterables.isEmpty;
+import static org.infinitest.testrunner.TestEvent.methodFailed;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
-import org.junit.*;
-import org.junit.runner.*;
-import org.junit.runner.notification.*;
+import org.assertj.core.description.Description;
+import org.junit.jupiter.api.BeforeEach;
 
 public class WhenConvertingJUnitEventsToInfinitestEvents {
 	private EventTranslator eventTranslator;
@@ -42,7 +42,7 @@ public class WhenConvertingJUnitEventsToInfinitestEvents {
 	private Description description;
 	private StubClock stubClock;
 
-	@Before
+	@BeforeEach
 	public void inContext() throws Exception {
 		stubClock = new StubClock();
 		eventTranslator = new EventTranslator(stubClock);

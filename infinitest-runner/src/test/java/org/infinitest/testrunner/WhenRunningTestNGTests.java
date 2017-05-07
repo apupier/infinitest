@@ -27,15 +27,21 @@
  */
 package org.infinitest.testrunner;
 
-import static com.google.common.collect.Iterables.*;
+import static com.google.common.collect.Iterables.getOnlyElement;
+import static com.google.common.collect.Iterables.size;
 import static org.junit.Assert.*;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
-import org.infinitest.*;
-import org.junit.*;
-import org.testng.*;
-import org.testng.reporters.*;
+import org.infinitest.TestNGConfiguration;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.testng.ITestResult;
+import org.testng.reporters.JUnitXMLReporter;
 
 public class WhenRunningTestNGTests {
 	private JUnit4Runner runner;
@@ -43,7 +49,7 @@ public class WhenRunningTestNGTests {
 	private TestNGConfiguration config;
 	private boolean wasCalled = false;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		runner = new JUnit4Runner();
 		config = new TestNGConfiguration();
@@ -55,7 +61,7 @@ public class WhenRunningTestNGTests {
 		wasCalled = false;
 	}
 
-	@After
+	@AfterEach
 	public void cleanup() {
 		TestWithTestNGGroups.fail = false;
 		TestWithTestNGClassAnnotationOnly.fail = false;

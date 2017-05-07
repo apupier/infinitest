@@ -36,7 +36,7 @@ import org.junit.*;
 public class WhenFilteringUnnecessaryClassesFromStackTraces {
 	private StackTraceFilter filter;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		filter = new StackTraceFilter();
 	}

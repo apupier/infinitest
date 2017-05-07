@@ -58,7 +58,7 @@ public class WhenAStackTraceElementIsSelected {
 	private java.util.List<StackTraceElement> stackTrace;
 	private Event event;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		shell = new FakeShell();
 		stackTrace = Lists.newArrayList();

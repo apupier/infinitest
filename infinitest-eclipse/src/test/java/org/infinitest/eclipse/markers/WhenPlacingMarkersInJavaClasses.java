@@ -47,7 +47,7 @@ public class WhenPlacingMarkersInJavaClasses {
 	private IResource resource;
 	private MarkerPlacementStrategy placementStrategy;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		event = mock(TestEvent.class);
 		lookup = mock(ResourceLookup.class);

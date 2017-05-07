@@ -42,7 +42,7 @@ public class WhenComparingMarkers {
 	private FakeResourceFinder finder;
 	private AssertionError failure;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		error = new Throwable();
 		failure = new AssertionError();

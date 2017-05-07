@@ -27,14 +27,14 @@
  */
 package org.infinitest.testrunner;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertFalse;
 
-import org.testng.annotations.*;
+import org.testng.annotations.Test;
 
 public class TestWithTestNGGroupsAndSetup {
 	public static boolean setupWasCalled;
 
-	@BeforeMethod(groups = { "automated", "integration" })
+	@BeforeEachMethod(groups = { "automated", "integration" })
 	public void setup() {
 		setupWasCalled = true;
 	}

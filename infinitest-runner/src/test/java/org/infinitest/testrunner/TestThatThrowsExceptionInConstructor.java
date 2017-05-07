@@ -27,7 +27,7 @@
  */
 package org.infinitest.testrunner;
 
-import org.junit.*;
+import org.junit.jupiter.api.Test;
 
 @SuppressWarnings("all")
 public class TestThatThrowsExceptionInConstructor {

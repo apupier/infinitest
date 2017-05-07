@@ -43,7 +43,7 @@ public class WhenPlacingMarkersUsingAStackTrace {
 	private Throwable error;
 	private IResource mockResource;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		ResourceLookup lookup = mock(ResourceLookup.class);
 		mockResource = mock(IResource.class);

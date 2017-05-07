@@ -41,7 +41,7 @@ public class WhenPlacingFailureMarkers {
 	private MarkerPlacer markerPlacer;
 	private List<MarkerPlacementStrategy> links;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		lookup = mock(ResourceLookup.class);
 		markerPlacer = new MarkerPlacer(lookup);

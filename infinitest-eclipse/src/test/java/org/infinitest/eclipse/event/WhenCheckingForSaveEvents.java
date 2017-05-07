@@ -46,7 +46,7 @@ public class WhenCheckingForSaveEvents extends ResourceEventSupport {
 	private DeltaVisitor deltaVisitor;
 	private IResource resource;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		detector = new SaveDetector(mock(SaveListener.class));
 		deltaVisitor = new DeltaVisitor();

@@ -27,17 +27,19 @@
  */
 package org.infinitest.eclipse.console;
 
-import static java.util.Arrays.*;
-import static org.mockito.Mockito.*;
+import static java.util.Arrays.asList;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
+import static org.mockito.Mockito.verify;
 
-import org.infinitest.*;
-import org.junit.*;
+import org.infinitest.TestQueueEvent;
+import org.testng.annotations.Test;
 
 public class ConsoleClearingListenerTest {
 	private TextOutputWriter writer;
 	private ConsoleClearingListener listener;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		writer = mock(TextOutputWriter.class);
 		listener = new ConsoleClearingListener(writer);

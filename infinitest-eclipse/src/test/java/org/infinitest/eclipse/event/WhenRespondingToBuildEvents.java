@@ -43,13 +43,13 @@ public class WhenRespondingToBuildEvents extends ResourceEventSupport {
 	private ClassFileChangeProcessor processor;
 	private WorkspaceFacade workspace;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		workspace = mock(WorkspaceFacade.class);
 		processor = new ClassFileChangeProcessor(workspace);
 	}
 
-	@After
+	@AfterEach
 	public void verifyWorkspace() {
 		verifyZeroInteractions(workspace);
 	}

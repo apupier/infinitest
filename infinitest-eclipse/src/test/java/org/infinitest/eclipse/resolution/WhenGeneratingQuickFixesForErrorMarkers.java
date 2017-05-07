@@ -42,7 +42,7 @@ public class WhenGeneratingQuickFixesForErrorMarkers {
   private MarkerResolutionGenerator generator;
   private IMarker marker;
 
-  @Before
+  @BeforeEach
   public void setUp() {
     generator = new MarkerResolutionGenerator();
     marker = mock(IMarker.class);

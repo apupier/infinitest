@@ -41,7 +41,7 @@ public class WhenCreatingAndRemovingCores implements CoreLifecycleListener {
 	private InfinitestCore coreAdded;
 	private InfinitestCore coreRemoved;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		registry = new InfinitestCoreRegistry();
 	}

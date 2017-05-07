@@ -45,7 +45,7 @@ public class WhenAggregatingTestEventsFromMultipleCores {
 	private InfinitestCore core;
 	private List<Object> events;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		events = newArrayList();
 		aggregator = new TestResultAggregator();

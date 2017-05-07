@@ -45,7 +45,7 @@ public class WhenRespondingToCleanEvents extends ResourceEventSupport {
 	private CleanEventProcessor processor;
 	private CoreRegistry coreRegistry;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		coreRegistry = mock(CoreRegistry.class);
 		processor = new CleanEventProcessor(coreRegistry, mock(ProjectSet.class));

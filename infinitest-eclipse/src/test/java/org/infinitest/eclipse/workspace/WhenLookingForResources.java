@@ -42,7 +42,7 @@ public class WhenLookingForResources {
 	private IResource mockResource;
 	private ResourceFinder finder;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		mockResource = mock(IResource.class);
 		finder = mock(ResourceFinder.class);

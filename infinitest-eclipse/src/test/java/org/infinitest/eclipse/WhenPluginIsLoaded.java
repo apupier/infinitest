@@ -41,7 +41,7 @@ public class WhenPluginIsLoaded {
 	private Preferences preferences;
 	private CoreSettings coreSettings;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		preferences = mock(Preferences.class);
 		coreSettings = mock(CoreSettings.class);

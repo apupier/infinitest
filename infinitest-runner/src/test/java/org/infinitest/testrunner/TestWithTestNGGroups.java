@@ -27,9 +27,11 @@
  */
 package org.infinitest.testrunner;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
 
-import org.testng.annotations.*;
+import org.testng.annotations.Test;
 
 /** Provides a set of TestNG-tests as a base to test the TestNG-configuration */
 public class TestWithTestNGGroups {

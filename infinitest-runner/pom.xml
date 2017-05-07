@@ -25,9 +25,9 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>junit</groupId>
-                  <artifactId>junit</artifactId>
-                  <version>${junit.version}</version>
+<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>${junit.jupiter.version}</version>
                   <type>jar</type>
                   <overWrite>false</overWrite>
                   <outputDirectory>target/classes</outputDirectory>
@@ -96,11 +96,23 @@
       <version>${assertj.version}</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
+<!--     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>${junit.version}</version>
-    </dependency>
+    </dependency> -->
+    <dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>${junit.jupiter.version}</version>
+			<scope>test</scope>
+	</dependency>
+	    <dependency>
+			<groupId>junit-pioneer</groupId>
+			<artifactId>junit-pioneer</artifactId>
+			<version>${junit.jupiter.version}</version>
+			<scope>test</scope>
+	</dependency>
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>

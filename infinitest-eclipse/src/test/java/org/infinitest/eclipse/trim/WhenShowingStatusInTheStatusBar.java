@@ -47,7 +47,7 @@ public class WhenShowingStatusInTheStatusBar {
 	private VisualStatus statusBar;
 	private TestQueueEvent firstEvent;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		statusBar = mock(VisualStatus.class);
 		presenter = new VisualStatusPresenter();

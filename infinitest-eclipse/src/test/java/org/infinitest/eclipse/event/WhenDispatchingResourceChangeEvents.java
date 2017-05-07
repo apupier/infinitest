@@ -37,7 +37,7 @@ public class WhenDispatchingResourceChangeEvents {
 	private CoreUpdateNotifier notifier;
 	private EventQueue eventQueue;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		eventQueue = mock(EventQueue.class);
 		notifier = new CoreUpdateNotifier(eventQueue);

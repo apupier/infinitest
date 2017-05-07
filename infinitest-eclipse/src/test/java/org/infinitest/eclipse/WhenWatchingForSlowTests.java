@@ -45,7 +45,7 @@ public class WhenWatchingForSlowTests {
 	private SlowTestObserver observer;
 	private TestCaseEvent event;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		mockMarkerRegistry = mock(SlowMarkerRegistry.class);
 		methodStats = new MethodStats("shouldRunSlowly");
@@ -59,7 +59,7 @@ public class WhenWatchingForSlowTests {
 		event = new TestCaseEvent("MyTest", this, results);
 	}
 
-	@After
+	@AfterEach
 	public void cleanup() {
 		resetToDefaults();
 	}

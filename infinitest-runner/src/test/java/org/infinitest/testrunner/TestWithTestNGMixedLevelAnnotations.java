@@ -27,8 +27,8 @@
  */
 package org.infinitest.testrunner;
 
-import org.testng.*;
-import org.testng.annotations.*;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 @Test(groups = "manual")
 public class TestWithTestNGMixedLevelAnnotations {

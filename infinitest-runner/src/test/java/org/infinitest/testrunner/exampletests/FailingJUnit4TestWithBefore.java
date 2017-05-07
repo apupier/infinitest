@@ -30,7 +30,7 @@ package org.infinitest.testrunner.exampletests;
 import org.junit.*;
 
 public final class FailingJUnit4TestWithBefore {
-	@Before
+	@BeforeEach
 	public void fail() {
 		throw new IllegalStateException("FAIL");
 	}

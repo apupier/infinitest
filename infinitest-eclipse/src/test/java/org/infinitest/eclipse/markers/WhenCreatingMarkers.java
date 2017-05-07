@@ -44,7 +44,7 @@ public class WhenCreatingMarkers {
 	private GenericMarkerRegistry registry;
 	private AssertionError error;
 
-	@Before
+	@BeforeEach
 	public void inContext() {
 		error = new AssertionError();
 		registry = new GenericMarkerRegistry(PROBLEM_MARKER_ID);
